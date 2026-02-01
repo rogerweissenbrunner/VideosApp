@@ -1,9 +1,210 @@
 # See https://git-scm.com/docs/gitattributes for more about git attribute files.
 
-# Mark the database schema as having been generated.
-db/schema.rb linguist-generated
+*                               text=auto
 
-# Mark any vendored files as having been vendored.
-vendor/* linguist-vendored
-config/credentials/*.yml.enc diff=rails_credentials
-config/credentials.yml.enc diff=rails_credentials
+# CSV
+*.csv                           text eol=lf diff=csv linguist-language=CSV
+*.tsv                           text eol=lf diff=csv linguist-language=CSV
+
+# Markdown
+*.md                            text eol=lf diff=markdown linguist-language=Markdown
+*.mdown                         text eol=lf diff=markdown linguist-language=Markdown
+*.markdown                      text eol=lf diff=markdown linguist-language=Markdown
+
+# YAML
+*.yaml                          text eol=lf diff=yaml linguist-language=YAML
+*.yml                           text eol=lf diff=yaml linguist-language=YAML
+
+# XML
+*.xml                           text eol=lf diff=xml linguist-language=XML
+
+# Scripting
+*.bat                           text eol=crlf diff=bat linguist-language=Batchfile
+*.ini                           text eol=crlf diff=ini linguist-language=INI
+*.ps1                           text eol=lf diff=powershell linguist-language=PowerShell
+*.bash                          text eol=lf diff=sh linguist-language=Shell
+*.csh                           text eol=lf diff=sh linguist-language=Shell
+*.fish                          text eol=lf diff=sh linguist-language=Shell
+*.ksh                           text eol=lf diff=sh linguist-language=Shell
+*.sh                            text eol=lf diff=sh linguist-language=Shell
+*.tcsh                          text eol=lf diff=sh linguist-language=Shell
+*.zsh                           text eol=lf diff=sh linguist-language=Shell
+*.env                           text eol=lf diff=dotenv linguist-language=Shell
+*.env.example                   text eol=lf diff=dotenv linguist-language=Shell
+Procfile                        text eol=lf linguist-language=Shell
+Makefile                        text eol=lf diff=makefile linguist-language=Makefile
+makefile                        text eol=lf diff=makefile linguist-language=Makefile
+
+# HTML
+*.html                          text eol=lf diff=html linguist-language=HTML
+*.htm                           text eol=lf diff=html linguist-language=HTML
+*.xhtml                         text eol=lf diff=html linguist-language=HTML
+*.svg                           text eol=lf diff=svg  linguist-language=SVG
+*.erb                           text eol=lf diff=html linguist-language=Ruby
+*.haml                          text eol=lf diff=haml linguist-language=Haml
+*.ejs                           text eol=lf diff=ejs  linguist-language=EJS
+*.jade                          text eol=lf diff=jade linguist-language=Jade
+*.latte                         text eol=lf diff=latte linguist-language=Latte
+*.mustache                      text eol=lf diff=mustache linguist-language=Mustache
+*.handlebars                    text eol=lf diff=handlebars linguist-language=Handlebars
+*.hbs                           text eol=lf diff=handlebars linguist-language=Handlebars
+*.hbt                           text eol=lf diff=handlebars linguist-language=Handlebars
+*.tpl                           text eol=lf diff=html linguist-language=HTML
+
+# CSS
+*.css                           text eol=lf diff=css linguist-language=CSS
+*.sass                          text eol=lf diff=sass linguist-language=Sass
+*.scss                          text eol=lf diff=scss linguist-language=SCSS
+*.less                          text eol=lf diff=less linguist-language=LESS
+*.styl                          text eol=lf diff=stylus linguist-language=Stylus
+
+# JavaScript
+*.ajs                           text eol=lf diff=javascript linguist-language=JavaScript
+*.cjs                           text eol=lf diff=javascript linguist-language=JavaScript
+*.mjs                           text eol=lf diff=javascript linguist-language=JavaScript
+*.js                            text eol=lf diff=javascript linguist-language=JavaScript
+*.json                          text eol=lf diff=json linguist-language=JSON
+*.jsx                           text eol=lf diff=javascript linguist-language=JavaScript
+*.ats                           text eol=lf diff=javascript linguist-language=TypeScript
+*.cts                           text eol=lf diff=javascript linguist-language=TypeScript
+*.mts                           text eol=lf diff=javascript linguist-language=TypeScript
+*.ts                            text eol=lf diff=javascript linguist-language=TypeScript
+*.tsx                           text eol=lf diff=javascript linguist-language=TypeScript
+*.vue                           text eol=lf diff=javascript linguist-language=JavaScript
+*.coffee                        text eol=lf diff=coffeescript linguist-language=CoffeeScript
+
+# Ruby
+*.rb                            text eol=lf diff=ruby linguist-language=Ruby
+*.ru                            text eol=lf diff=ruby linguist-language=Ruby
+*.rhtml                         text eol=lf diff=ruby linguist-language=Ruby
+*.rjs                           text eol=lf diff=ruby linguist-language=Ruby
+*.rxml                          text eol=lf diff=ruby linguist-language=Ruby
+*.erb                           text eol=lf diff=ruby linguist-language=Ruby
+config.ru                       text eol=lf linguist-language=Ruby
+Gemfile                         text eol=lf diff=ruby linguist-language=Ruby
+Gemfile.lock                    text eol=lf diff=ruby linguist-language=Ruby
+Rakefile                        text eol=lf linguist-language=Ruby
+*.rake                          text eol=lf linguist-language=Ruby
+*.gemspec                       text eol=lf linguist-language=Ruby
+
+# Rails
+config/credentials/*.yml.enc    diff=rails_credentials
+config/credentials.yml.enc      diff=rails_credentials
+db/schema.rb                    linguist-generated
+vendor/*                        linguist-vendored
+
+# SQL
+*.sql               text eol=lf diff=sql linguist-language=SQL
+
+# Binaries
+*.exe               binary
+*.dll               binary
+*.so                binary
+*.pyc               binary
+
+# Files
+AUTHORS             text eol=lf
+CHANGELOG           text eol=lf
+CHANGES             text eol=lf
+CONTRIBUTING        text eol=lf
+COPYING             text eol=lf
+INSTALL             text eol=lf
+license             text eol=lf
+LICENSE             text eol=lf
+NEWS                text eol=lf
+readme              text eol=lf
+*README*            text eol=lf
+TODO                text eol=lf
+
+# Images
+*.ai                binary
+*.bmp               binary
+*.eps               binary
+*.gif               binary
+*.ico               binary
+*.jpg               binary
+*.jpeg              binary
+*.pdf               binary
+*.png               binary
+*.psd               binary
+*.svgz              binary
+*.tif               binary
+*.tiff              binary
+*.wbmp              binary
+*.webp              binary
+
+# Audio
+*.kar               binary
+*.m4a               binary
+*.mid               binary
+*.midi              binary
+*.mp3               binary
+*.ogg               binary
+*.ra                binary
+
+# Video
+*.3gpp              binary
+*.3gp               binary
+*.as                binary
+*.asf               binary
+*.asx               binary
+*.fla               binary
+*.flv               binary
+*.m4v               binary
+*.mng               binary
+*.mov               binary
+*.mp4               binary
+*.mpeg              binary
+*.mpg               binary
+*.swc               binary
+*.swf               binary
+*.webm              binary
+
+# Compressed files
+*.7z                binary
+*.7zip              binary
+*.bz2               binary
+*.dmg               binary
+*.gz                binary
+*.rar               binary
+*.tar               binary
+*.tar.bz2           binary
+*.tar.gz            binary
+*.tar.xz            binary
+*.tgz               binary
+*.zip               binary
+*.Z                 binary
+
+# Typography
+*.eot               binary
+*.otf               binary
+*.ttf               binary
+*.woff              binary
+*.woff2             binary
+
+# Settings
+.csslintrc          text eol=lf diff=css
+.editorconfig       text eol=lf diff=editorconfig
+.env                text eol=lf diff=dotenv
+.eslintrc           text eol=lf diff=javascript
+.gitattributes      text eol=lf diff=gitattributes
+.gitconfig          text eol=lf diff=gitconfig
+.gitignore          text eol=lf diff=gitignore
+.htaccess           text eol=lf diff=htaccess
+.jscsrc             text eol=lf diff=javascript
+.jshintrc           text eol=lf diff=javascript
+.jshintignore       text eol=lf diff=javascript
+.stylelintrc        text eol=lf diff=css
+.travis.yml         text eol=lf diff=travis
+eslint.config.js    text eol=lf diff=javascript
+.prettierrc         text eol=lf diff=javascript
+
+*.bowerrc           text eol=lf diff=json
+*.cnf               text eol=lf diff=ini
+*.conf              text eol=lf diff=ini
+*.config            text eol=lf diff=ini
+*.npmignore         text eol=lf diff=npmignore
+
+.github             export-ignore
+CHANGELOG.md        export-ignore
+.styleci.yml        export-ignore
